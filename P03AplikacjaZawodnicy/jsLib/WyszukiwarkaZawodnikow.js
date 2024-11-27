@@ -3,6 +3,12 @@
 
 $(document).ready(function () {
 
+    $("#txtSzukaj").on("keypress", function (e) {
+        if (e.which == 13) {
+            e.preventDefault();
+            wyszukaj();
+        }
+    });
 
     $("#btnSzukaj").on("click", function () {
         wyszukaj();
@@ -10,6 +16,9 @@ $(document).ready(function () {
 
     function wyszukaj() {
         var wartoscZInputa = $('#txtSzukaj').val();
+
+        var obrazek = $("#dvLadowanieContainer").html();
+        $("#dvKontenerTabelki").html(obrazek);
 
         $.ajax({
             method: "POST",

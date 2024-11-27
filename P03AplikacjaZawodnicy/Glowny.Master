@@ -42,7 +42,7 @@
 <body class="">
 
     <div style="display:none" id="dvLadowanieContainer">
-        <img />
+        <img style="width:50px" src="images/loading.gif" />
     </div>
 
   <div class="wrapper ">
