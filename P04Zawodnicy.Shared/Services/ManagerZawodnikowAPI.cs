@@ -1,4 +1,5 @@
-﻿using P04Zawodnicy.Shared.Domains;
+﻿using P03AplikacjaZawodnicy.Model;
+using P04Zawodnicy.Shared.Domains;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,11 @@ namespace P04Zawodnicy.Shared.Services
         }
 
         public Trener[] PodajTrenerow()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ResponseData PodajTrenerowStronicowanie(RequestData request)
         {
             throw new NotImplementedException();
         }

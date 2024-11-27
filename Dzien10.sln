@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04Zawodnicy.Shared", "P04Z
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02Wyszukiwarka", "P02Wyszukiwarka\P02Wyszukiwarka.csproj", "{F66D3613-80F0-4EF0-9743-25EAEE979C33}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1416D5E2-E02C-40E1-832C-F11E860588D6}"
+	ProjectSection(SolutionItems) = preProject
+		podsumowanie.txt = podsumowanie.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

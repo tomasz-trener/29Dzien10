@@ -1,4 +1,5 @@
-﻿using P04Zawodnicy.Shared.Data;
+﻿using P03AplikacjaZawodnicy.Model;
+using P04Zawodnicy.Shared.Data;
 using P04Zawodnicy.Shared.Domains;
 using System;
 using System.Collections.Generic;
@@ -97,6 +98,30 @@ namespace P04Zawodnicy.Shared.Services
                     Nazwisko = x.nazwisko_t,
                 }).ToArray();
                 return ternerzy;
+            }
+        }
+
+        public ResponseData PodajTrenerowStronicowanie(RequestData request)
+        {
+            using (ModelBazyDataContext db = new ModelBazyDataContext(connString))
+            {
+                var trenerzy = db.TrenerDb.Select(x => new Trener()
+                {
+                    Id = x.id_trenera,
+                    Imie = x.imie_t,
+                    Nazwisko = x.nazwisko_t,
+                })
+                    .Skip((request.Strona-1)*request.LiczbaRekordow)
+                    .Take(request.LiczbaRekordow)
+                    .ToArray();
+
+                int calkowitaLiczbaRekordow = db.TrenerDb.Count();
+
+                return new ResponseData()
+                {
+                    Trenerzy = trenerzy,
+                    IleStron = (int)Math.Ceiling((double)calkowitaLiczbaRekordow / (double)request.LiczbaRekordow)
+                };
             }
         }
 

@@ -1,0 +1,7 @@
+
+zadanie: 
+stwórz now¹ stronê do wyœwietlania tabeli z trenerami z opcj¹ stronicowania 
+dane powinny ³adowaæ siê asynchronicznie. 
+Na serwer wysy³amy nr strony i liczbê rekordów jako JSON
+serwer zwraca kolekcjê trenerów jako JSON 
+

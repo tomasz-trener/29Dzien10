@@ -40,7 +40,7 @@
 </head>
 
 <body class="">
-
+     <script src="../assets/js/core/jquery.min.js"></script>
     <div style="display:none" id="dvLadowanieContainer">
         <img style="width:50px" src="images/loading.gif" />
     </div>
@@ -212,7 +212,7 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="../assets/js/core/jquery.min.js"></script>
+ 
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
@@ -227,6 +227,7 @@
   <script src="../assets/demo/demo.js"></script>
   <script src="jsLib/WyszukiwarkaZawodnikow.js"></script>
     <script src="jsLib/ZapisywanieZawodnikow.js"></script>
+
 </body>
 
 </html>

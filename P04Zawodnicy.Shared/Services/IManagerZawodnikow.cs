@@ -1,4 +1,5 @@
-﻿using P04Zawodnicy.Shared.Domains;
+﻿using P03AplikacjaZawodnicy.Model;
+using P04Zawodnicy.Shared.Domains;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,5 +32,7 @@ namespace P04Zawodnicy.Shared.Services
         Zawodnik PodajZawodnika(int id);
 
         List<Zawodnik> PodajZawodnikowFiltr(string szukanaFraza);
+
+        ResponseData PodajTrenerowStronicowanie(RequestData request);
     }
 }

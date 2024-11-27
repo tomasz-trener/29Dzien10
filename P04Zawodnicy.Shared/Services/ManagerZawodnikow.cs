@@ -1,4 +1,5 @@
-﻿using P04Zawodnicy.Shared.Domains;
+﻿using P03AplikacjaZawodnicy.Model;
+using P04Zawodnicy.Shared.Domains;
 using P04Zawodnicy.Shared.Tools;
 using System;
 using System.Collections.Generic;
@@ -198,6 +199,11 @@ namespace P04Zawodnicy.Shared.Services
         }
 
         public List<Zawodnik> PodajZawodnikowFiltr(string szukanaFraza)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ResponseData PodajTrenerowStronicowanie(RequestData request)
         {
             throw new NotImplementedException();
         }
