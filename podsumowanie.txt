@@ -1,4 +1,15 @@
 
+1) wczoraj bazowalismy na kontrolkach aspx , ktore aby wykonac akcjê musia³y odswiezyc strone 
+2) dzisiaj pracujemy z javascript , ajax i wysylamy ¿adania http asynchronicznie 
+
+3) Index.html - pokazlismy, jak uzywajac tylko javascript wykonac operacje po stronie klienta 
+4) StronaAjax.html - pokazalismy jak uzywajac javascript oraz ajax i jak wyslac ¿¹danie na server asynchronicznie 
+5) dodaliœmy obs³uge jaxa w naszej g³ównej aplikacji 
+	- dodaliœmy opcjê filtrowania 
+	- usuwania
+	- edycja
+	- stronicowania 
+
 zadanie: 
 stwórz now¹ stronê do wyœwietlania tabeli z trenerami z opcj¹ stronicowania 
 dane powinny ³adowaæ siê asynchronicznie. 
