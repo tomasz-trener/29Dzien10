@@ -89,6 +89,7 @@
     <Content Include="assets\js\plugins\chartjs.min.js" />
     <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="css\stylePodstawowe.css" />
+    <Content Include="images\loading.gif" />
     <Content Include="jsLib\WyszukiwarkaZawodnikow.js" />
     <Content Include="services\Wyszukiwarka.aspx" />
     <Content Include="SzczegolyZawodnika.aspx" />

@@ -13,7 +13,8 @@
 
              <div class="card-body">
                <div class="table-responsive">
-                 <table class="table">
+                   <div id="dvKontenerTabelki">
+                        <table class="table">
   <thead class=" text-primary">
     <th>
       Nazwa
@@ -51,6 +52,8 @@
           %>
   </tbody>
 </table>
+                   </div>
+                
                </div>
              </div>
            </div>

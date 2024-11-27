@@ -20,7 +20,6 @@ $(document).ready(function () {
 
                 $("#main-panel > div.content > div > div").html(msg);
 
-
             });
     }
 
