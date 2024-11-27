@@ -58,4 +58,6 @@
              </div>
            </div>
 
+<%--Ten javascript musi być ładowany dopiero po 
+wyrendowaniu przycisków --%>
  <script src="../jsLib/UsuwanieZawodnikow.js"></script>
