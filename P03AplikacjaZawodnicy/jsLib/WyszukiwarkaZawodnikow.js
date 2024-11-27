@@ -27,7 +27,10 @@ $(document).ready(function () {
         })
             .done(function (msg) {
 
-                $("#main-panel > div.content > div > div").html(msg);
+                // gdy jest wiecej niz jeden div do my szukamy pierwszego z kolei 
+                // np z poziomu edycji zawodnika podmieniamy tylko pierwsz¹ kartê 
+                var div = $("#main-panel > div.content > div > div").first();
+                div.html(msg);
 
             });
     }
