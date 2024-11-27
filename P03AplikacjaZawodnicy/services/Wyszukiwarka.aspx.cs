@@ -19,8 +19,10 @@ namespace P03AplikacjaZawodnicy.services
             IManagerZawodnikow mz = new ManagerZawodnikowLINQ();
 
             string szukanaFraza = Request["fraza"];
-            if(!string.IsNullOrEmpty(szukanaFraza))
-                Zawodnicy = mz.PodajZawodnikow
+            if (!string.IsNullOrEmpty(szukanaFraza))
+                Zawodnicy = mz.PodajZawodnikowFiltr(szukanaFraza);
+            else
+                Zawodnicy = mz.WczytajZawodnikow();
         }
     }
 }

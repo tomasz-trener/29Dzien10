@@ -37,18 +37,7 @@
           foreach (var z in Zawodnicy)
           {  %>
 
-               <% if(NowoDodaniZawodnicy != null && NowoDodaniZawodnicy.Contains(z.Id_zawodnika))
-                {
-
-               %>
-
-                   <tr class="nowoDodany"> 
-
-               <%}
-               else
-               {%> 
-                   <tr <%= IdPodswietlanego== z.Id_zawodnika ? "class=\"podswietlony\" " : "" %> >
-             <%}%>            
+               <tr>       
 
               <td><a href="SzczegolyZawodnika.aspx?id=<%= z.Id_zawodnika %>"><%= z.ImieNazwisko %></a></td>
               <td><%= z.Kraj %></td>

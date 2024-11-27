@@ -199,17 +199,30 @@ namespace P04Zawodnicy.Shared.Services
 
         public List<Zawodnik> PodajZawodnikowFiltr(string szukanaFraza)
         {
-            //szukanaFraza = szukanaFraza.ToLower();
+            
             using(ModelBazyDataContext db = new ModelBazyDataContext(connString))
             {
-                var zawodnicy = db.ZawodnikDb
+                // to działa na bazie danych 
+                //var zawodnicy = db.ZawodnikDb
+                //    .Where(x =>
+                //        x.imie.Contains(szukanaFraza) ||
+                //        x.nazwisko.Contains(szukanaFraza) ||
+                //        x.kraj.Contains(szukanaFraza) ||
+                //        (x.data_ur.HasValue && x.data_ur.Value.Year.ToString().Contains(szukanaFraza)) ||
+                //        (x.data_ur.HasValue && x.data_ur.Value.Month.ToString().Contains(szukanaFraza)) ||
+                //        (x.data_ur.HasValue && x.data_ur.Value.Day.ToString().Contains(szukanaFraza)) ||
+                //        (x.wzrost.HasValue && x.wzrost.ToString().Contains(szukanaFraza)) ||
+                //        (x.waga.HasValue && x.waga.ToString().Contains(szukanaFraza)))
+                //    .ToArray();
+
+                // to działa loklanie bo nie mamy tłumaczenia ToString("ddMMyyyy")
+                szukanaFraza = szukanaFraza.ToLower();
+                var zawodnicy = db.ZawodnikDb.ToArray()
                     .Where(x =>
-                        x.imie.Contains(szukanaFraza) ||
-                        x.nazwisko.Contains(szukanaFraza) ||
-                        x.kraj.Contains(szukanaFraza) ||
-                        (x.data_ur.HasValue && x.data_ur.Value.Year.ToString().Contains(szukanaFraza)) ||
-                        (x.data_ur.HasValue && x.data_ur.Value.Month.ToString().Contains(szukanaFraza)) ||
-                        (x.data_ur.HasValue && x.data_ur.Value.Day.ToString().Contains(szukanaFraza)) ||
+                        x.imie.ToLower().Contains(szukanaFraza) ||
+                        x.nazwisko.ToLower().Contains(szukanaFraza) ||
+                        x.kraj.ToLower().Contains(szukanaFraza) ||
+                        (x.data_ur.HasValue && x.data_ur.Value.ToString("ddMMyyyy").Contains(szukanaFraza)) ||
                         (x.wzrost.HasValue && x.wzrost.ToString().Contains(szukanaFraza)) ||
                         (x.waga.HasValue && x.waga.ToString().Contains(szukanaFraza)))
                     .ToArray();
